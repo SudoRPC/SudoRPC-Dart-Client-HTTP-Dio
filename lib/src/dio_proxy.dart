@@ -21,14 +21,14 @@ class SudoRPCDioHTTPProxy implements SudoRPCCallProxy {
     String listenerIdentifier,
     SudoRPCCallProxyCallback callback,
   ) {
-    // TODO: implement addListener
+    _listeners[listenerIdentifier] = callback;
   }
 
   @override
   void removeListener(
     String listenerIdentifier,
   ) {
-    // TODO: implement removeListener
+    _listeners.remove(listenerIdentifier);
   }
 
   @override
