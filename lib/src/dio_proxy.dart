@@ -47,7 +47,7 @@ class SudoRPCDioHTTPProxy implements SudoRPCCallProxy {
         }
       },
     ).catchError(
-      (error) {
+      (dynamic error) {
         if (call is! SudoRPCCallV1) {
           throw Exception('SudoRPCDioHTTPProxy only supports SudoRPCCallV1');
         }
